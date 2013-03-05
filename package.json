@@ -1,0 +1,33 @@
+{
+  "name": "grunt-asset-revisions",
+  "description": "Generate revisions of assets.",
+  "version": "0.0.1",
+  "author": "vanetix <matmcfarland@gmail.com>",
+  "main": "Gruntfile.js",
+  "bin": "bin/grunt-asset-revisions",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vanetix/grunt-asset-revisions.git"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-contrib-jshint": "~0.1.1",
+    "grunt-contrib-nodeunit": "~0.1.2",
+    "grunt-contrib-clean": "~0.4.0"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.0"
+  },
+  "keywords": [
+    "assets",
+    "revisions",
+    "gruntplugin",
+    "asset-revisions"
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  }
+}

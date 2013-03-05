@@ -1,10 +1,10 @@
 # grunt-asset-revisions [![Build Status](https://travis-ci.org/vanetix/grunt-asset-revisions.png)](https://travis-ci.org/vanetix/grunt-asset-revisions)
 ***Only works with grunt >= 0.4.0***
 
-A grunt task for including a file within another file (think php includes). *Circular* imports will break the recursive strategy.
+A grunt plugin for versioning assets.
 
 ## Getting Started
-Install this grunt plugin next to your project's [grunt.js gruntfile][getting_started] with: `npm install grunt-asset-revisions`
+Install this grunt plugin next to your project's `Gruntfile.js` with `npm install grunt-asset-revisions`.
 
 Then add this line to your project's `grunt.js` gruntfile:
 
@@ -13,13 +13,10 @@ grunt.loadNpmTasks('grunt-asset-revisions');
 ```
 
 ## Usage
+Coming soon
 
-
-## Example
-
-
-## Release History
-0.0.1 - Initial release
+## Examples
+Coming soon
 
 ## License (MIT)
 Copyright (c) 2013 Matt McFarland

@@ -1,4 +1,4 @@
-# grunt-asset-revisions [![Build Status](https://travis-ci.org/vanetix/grunt-includes.png)](https://travis-ci.org/vanetix/grunt-asset-revisions)
+# grunt-asset-revisions [![Build Status](https://travis-ci.org/vanetix/grunt-asset-revisions.png)](https://travis-ci.org/vanetix/grunt-asset-revisions)
 ***Only works with grunt >= 0.4.0***
 
 A grunt task for including a file within another file (think php includes). *Circular* imports will break the recursive strategy.

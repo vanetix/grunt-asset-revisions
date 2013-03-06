@@ -22,13 +22,35 @@ module.exports = function(grunt) {
   grunt.registerMultiTask('revisions', 'Automate the hash renames of assets filename', function() {
 
     /**
-     * Default options
+     * Loop over all file arguments saving revisions in
+     * directory `f.dest`
      */
 
-    var options = this.options({});
-
     this.files.forEach(function(f) {
-      f.src.forEach(function(file) {
+
+      /**
+       * Is the destination a file, if so we cannnot save to it.
+       */
+
+      if(grunt.file.isFile(f.dest)) {
+        var error = 'Skipping: ' + this.target +
+                    '. Cannot have a dest file, must be a folder.';
+        grunt.fail.warn(error);
+        return;
+      }
+
+      /**
+       * Filter out non-existing files
+       */
+
+      f.src.filter(function(f) {
+        if(!grunt.file.isFile(f)) {
+          grunt.log.error('File: ' + f + ' not found.');
+          return false;
+        }
+
+        return true;
+      }).forEach(function(file) {
         var r = revision(file);
 
         if(f.flatten) {

@@ -25,9 +25,14 @@ module.exports = function(grunt) {
 
     // Build the test cases
     revisions: {
-      tests: {
+      basic: {
         src: ['test/images/*'],
-        dest: 'tmp'
+        dest: 'tmp/basic'
+      },
+      flatten: {
+        flatten: true,
+        src: ['test/images/*'],
+        dest: 'tmp/flatten'
       }
     }
   });

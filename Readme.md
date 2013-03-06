@@ -1,22 +1,43 @@
 # grunt-asset-revisions [![Build Status](https://travis-ci.org/vanetix/grunt-asset-revisions.png)](https://travis-ci.org/vanetix/grunt-asset-revisions)
-***Only works with grunt >= 0.4.0***
 
-A grunt plugin for versioning assets.
+> A grunt plugin for versioning assets.
 
 ## Getting Started
-Install this grunt plugin next to your project's `Gruntfile.js` with `npm install grunt-asset-revisions`.
+***This task only works with grunt >= 0.4.0***
 
-Then add this line to your project's `grunt.js` gruntfile:
+Install this grunt plugin next to your project's `Gruntfile.js` with:
+
+```shell
+npm install grunt-asset-revisions
+```
+
+Then add this line to your project's `Gruntfile.js`:
 
 ```javascript
 grunt.loadNpmTasks('grunt-asset-revisions');
 ```
 
 ## Usage
-Coming soon
+**Basic**
 
-## Examples
-Coming soon
+```javascript
+revisions: {
+  basic: {
+    src: ['path/to/assets/**'],
+    dest: 'path/to/dest'
+  }
+}
+```
+
+**Flatten**
+
+```javascript
+flatten: {
+  flatten: true,
+  src: ['path/to/assets/**'],
+  dest: 'path/to/dest'
+}
+```
 
 ## License (MIT)
 Copyright (c) 2013 Matt McFarland

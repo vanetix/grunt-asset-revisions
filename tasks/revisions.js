@@ -33,7 +33,7 @@ module.exports = function(grunt) {
        */
 
       if(grunt.file.isFile(f.dest)) {
-        var error = 'Skipping: ' + this.target +
+        var error = 'Skipping: ' + f.dest +
                     '. Cannot have a dest file, must be a folder.';
         grunt.fail.warn(error);
         return;

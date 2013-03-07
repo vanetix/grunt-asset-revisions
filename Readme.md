@@ -1,4 +1,4 @@
-# grunt-asset-revisions [![Build Status](https://travis-ci.org/vanetix/grunt-asset-revisions.png)](https://travis-ci.org/vanetix/grunt-asset-revisions)
+# grunt-asset-revisions [![Build Status](https://travis-ci.org/vanetix/grunt-asset-revisions.png?branch=master)](https://travis-ci.org/vanetix/grunt-asset-revisions)
 
 > A grunt plugin for versioning assets.
 

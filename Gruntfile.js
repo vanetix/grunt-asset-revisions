@@ -45,7 +45,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
 
-  // Task task cleans `tmp` and builds includes, then runs tests
+  // Task cleans `tmp` and builds revisions, then runs tests
   grunt.registerTask('test', ['clean', 'revisions', 'nodeunit']);
 
   // Default task

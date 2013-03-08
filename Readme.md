@@ -32,10 +32,12 @@ revisions: {
 **Flatten**
 
 ```javascript
-flatten: {
-  flatten: true,
-  src: ['path/to/assets/**'],
-  dest: 'path/to/dest'
+revisions: {
+  flatten: {
+    flatten: true,
+    src: ['path/to/assets/**'],
+    dest: 'path/to/dest'
+  }
 }
 ```
 
@@ -43,8 +45,10 @@ flatten: {
 > original filenames will be renamed
 
 ```javascript
-rename: {
-  src: ['path/to/assets/**']
+revisions: {
+  rename: {
+    src: ['path/to/assets/**']
+  }
 }
 ```
 

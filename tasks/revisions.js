@@ -12,7 +12,8 @@ module.exports = function(grunt) {
    * Dependencies
    */
 
-  var path = require('path'),
+  var fs = require('fs'),
+      path = require('path'),
       crypto = require('crypto');
 
   /**
@@ -53,12 +54,18 @@ module.exports = function(grunt) {
       }).forEach(function(file) {
         var r = revision(file);
 
-        if(f.flatten) {
-          r = path.basename(r);
-        }
+        if(f.dest) {
+          if(f.flatten) {
+            r = path.basename(r);
+          }
 
-        grunt.file.copy(file, path.join(f.dest, r));
-        grunt.log.write(file + ' ').oklns(r);
+          r = path.join(f.dest, r);
+          grunt.file.copy(file, r);
+          grunt.log.write(file + ' ').oklns(r);
+        } else {
+          fs.renameSync(file, r);
+          grunt.log.write(file + ' renamed to ').oklns(r);
+        }
       });
     });
   });

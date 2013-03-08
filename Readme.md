@@ -39,6 +39,15 @@ flatten: {
 }
 ```
 
+**Rename**
+> original filenames will be renamed
+
+```javascript
+rename: {
+  src: ['path/to/assets/**']
+}
+```
+
 ## License (MIT)
 Copyright (c) 2013 Matt McFarland
 

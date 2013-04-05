@@ -26,6 +26,9 @@ module.exports = function(grunt) {
     // Build the test cases
     revisions: {
       basic: {
+        options: {
+          manifest: true
+        },
         src: ['test/images/*'],
         dest: 'tmp/basic'
       },

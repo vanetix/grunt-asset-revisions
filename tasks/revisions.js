@@ -23,11 +23,20 @@ module.exports = function(grunt) {
   grunt.registerMultiTask('revisions', 'Automate the hash renames of assets filename', function() {
 
     /**
+     * Default options
+     */
+
+    var options = this.options({
+      manifest: false
+    });
+
+    /**
      * Loop over all file arguments saving revisions in
      * directory `f.dest`
      */
 
     this.files.forEach(function(f) {
+      var assets = [];
 
       /**
        * Is the destination a file, if so we cannnot save to it.
@@ -53,6 +62,7 @@ module.exports = function(grunt) {
         return true;
       }).forEach(function(file) {
         var r = revision(file);
+        var map = {};
 
         if(f.dest) {
           if(f.flatten) {
@@ -66,7 +76,14 @@ module.exports = function(grunt) {
           fs.renameSync(file, r);
           grunt.log.write(file + ' renamed to ').oklns(r);
         }
+
+        map[file] = r;
+        assets.push(map);
       });
+
+      if(options.manifest) {
+        grunt.file.write(path.join(f.dest, 'manifest.json'), JSON.stringify(assets, null, ' '));
+      }
     });
   });
 

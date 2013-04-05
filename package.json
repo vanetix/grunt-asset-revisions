@@ -1,7 +1,7 @@
 {
   "name": "grunt-asset-revisions",
   "description": "Generate revisions of assets.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "vanetix <matmcfarland@gmail.com>",
   "main": "Gruntfile.js",
   "bin": "bin/grunt-asset-revisions",

@@ -11,7 +11,7 @@ exports.revisions = {
     ];
 
     var actual = grunt.file.expand({cwd: 'tmp/basic'}, '**/*.jpg').sort();
-    test.deepEqual(expected, actual, 'should do basic asset revisions');
+    test.deepEqual(actual, expected, 'should do basic asset revisions');
 
     test.done();
   },
@@ -26,7 +26,17 @@ exports.revisions = {
     ];
 
     var actual = grunt.file.expand({cwd: 'tmp/flatten'}, '*.jpg').sort();
-    test.deepEqual(expected, actual, 'should do flatten asset revisions');
+    test.deepEqual(actual, expected, 'should do flatten asset revisions');
+
+    test.done();
+  },
+
+  manifest: function(test) {
+    test.expect(1);
+
+    var actual = JSON.parse(grunt.file.read('tmp/basic/manifest.json'));
+    var expected = JSON.parse(grunt.file.read('test/expected/manifest.json'));
+    test.deepEqual(actual, expected, 'should write a valid manifest file');
 
     test.done();
   }

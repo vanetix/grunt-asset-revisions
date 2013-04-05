@@ -41,6 +41,20 @@ revisions: {
 }
 ```
 
+**Manifest**
+
+```javascript
+revisions: {
+  manifest: {
+    options: {
+        manifest: true
+    },
+    src: ['path/to/assets/**'],
+    dest: 'path/to/dest'
+  }
+}
+```
+
 **Rename**
 > original filenames will be renamed
 
